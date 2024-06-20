@@ -1,6 +1,6 @@
 ---
 import { MODS } from "../consts/mods.ts";
-import '../styles/global.css';
+import "../styles/global.css";
 ---
 
 <html lang="en">
@@ -13,27 +13,29 @@ import '../styles/global.css';
   </head>
   <body>
     <div class="search-container">
-      <div class="circle"><img src="" alt="Icon" /></div>
+      <img src="banner.webp" alt="Icon" class="banner" />
       <div class="container">
         <input type="search" id="buscar" placeholder="BUSCAR" />
         <button><i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
     </div>
-    <h1>MODS</h1>
-    <ul class="mods">
-      {
-        MODS.map((mod) => (
-          <li>
-            <div class="image-container">
-              <img src="" alt="Imagen 2" />
-            </div>
-            <div>
-              <p class="descripcion">{mod.name}</p>
-              <p>{mod.description}</p>
-            </div>
-          </li>
-        ))
-      }
-    </ul>
+    <div class="lista-de-mods">
+      <h1>Lista de mods</h1>
+      <ul class="mods">
+        {
+          MODS.map((mod) => (
+            <li>
+              <div class="image-container">
+                <img src="" alt="Imagen 2" />
+              </div>
+              <div>
+                <p class="descripcion">{mod.name}</p>
+                <p>{mod.description}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </body>
 </html>
