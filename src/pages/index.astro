@@ -1,0 +1,39 @@
+---
+import { MODS } from "../consts/mods.ts";
+import '../styles/global.css';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <div class="search-container">
+      <div class="circle"><img src="" alt="Icon" /></div>
+      <div class="container">
+        <input type="search" id="buscar" placeholder="BUSCAR" />
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+    </div>
+    <h1>MODS</h1>
+    <ul class="mods">
+      {
+        MODS.map((mod) => (
+          <li>
+            <div class="image-container">
+              <img src="" alt="Imagen 2" />
+            </div>
+            <div>
+              <p class="descripcion">{mod.name}</p>
+              <p>{mod.description}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </body>
+</html>
