@@ -16,7 +16,7 @@ import "../styles/global.css";
       <img src="banner.webp" alt="Icon" class="banner" />
       <div class="container">
         <input type="search" id="buscar" placeholder="BUSCAR" />
-        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button><img src="/search.svg" alt="img-search" width="30px" class="search-icon"></button>
       </div>
     </div>
     <div class="lista-de-mods">
@@ -26,7 +26,7 @@ import "../styles/global.css";
           MODS.map((mod) => (
             <li>
               <div class="image-container">
-                <img src="" alt="Imagen 2" />
+                <img src={`/icon/${mod.id}.webp`} alt="Imagen 2" class="img-icon"/>
               </div>
               <div>
                 <p class="descripcion">{mod.name}</p>

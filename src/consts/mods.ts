@@ -18,7 +18,7 @@ export const MODS: Mod[] = addGetters([
       "SecurityCraft Mod Añade exactamente lo que el nombre sugiere láser, escáneres de retina, teclados, puertas irrompibles y más. Seadapta bien a mods como Smart Moving, Secret Rooms y el mod de WallJump. Ahora tiene la opción de configurar contraseñas y códigos clave para acceder a través de puertas que son inquebrantables, excepto por el propietario.",
   },
   {
-    id: "advancement-plaques",
+    id: "advanced-plaques",
     name: "Advancement Plaques",
     description:
       "Advancement Plaques Mod reemplaza el banner emergente que se muestra cuando alcanzamos un nuevo logro en el juego.",
@@ -79,12 +79,12 @@ export const MODS: Mod[] = addGetters([
   },
   {
     id: "chochocraft",
-    name: "ChocoCraf",
+    name: "ChocoCraft",
     description:
       "ChocoCraft Mod añade animales llamados Chocobos al juego. Incluye Chocobos de diferentes colores con diferentes atributos en su persona mayor y la forma juvenil.",
   },
   {
-    id: "clups",
+    id: "clumps",
     name: "Clumps",
     description:
       "Clumbs mod para minecraft (Orbes XP se amontonan) está programado y diseñado con un propósito de mejorar los fps para el jugado en un caso particular.",
@@ -205,7 +205,7 @@ export const MODS: Mod[] = addGetters([
   },
   {
     id: "not-just-sandiwhich",
-    name: "Not Just Sandwich",
+    name: "Not Just Sandwich", 
     description:
       "Not Just Sandwich Mod agrega variedad de emparedados y otros alimentos, estos son fabricados con objetos vanilla. Contamos con un total de 17 sándwiches diferentes para preparar, además de otras comidas como sushi, tocino, queso, jalea, huevo frito, y pasteles de frutas.",
   },
