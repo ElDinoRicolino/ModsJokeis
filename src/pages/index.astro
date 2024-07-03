@@ -16,26 +16,51 @@ import "../styles/global.css";
       <img src="banner.webp" alt="Icon" class="banner" />
       <div class="container">
         <input type="search" id="buscar" placeholder="BUSCAR" />
-        <button><img src="/search.svg" alt="img-search" width="30px" class="search-icon"></button>
+        <button id="search-button">
+          <img src="/search.svg" alt="img-search" width="30px" class="search-icon">
+        </button>
       </div>
     </div>
     <div class="lista-de-mods">
       <h1>Lista de mods</h1>
-      <ul class="mods">
-        {
-          MODS.map((mod) => (
-            <li>
-              <div class="image-container">
-                <img src={`/icon/${mod.id}.webp`} alt="Imagen 2" class="img-icon"/>
-              </div>
-              <div>
-                <p class="descripcion">{mod.name}</p>
-                <p>{mod.description}</p>
-              </div>
-            </li>
-          ))
-        }
+      <ul id="mods-list" class="mods">
+        {MODS.map((mod) => (
+          <li>
+            <div class="image-container">
+              <img src={`/icon/${mod.id}.webp`} alt="Imagen 2" class="img-icon" />
+            </div>
+            <div>
+              <p class="descripcion">{mod.name}</p>
+              <p>{mod.description}</p>
+            </div>
+          </li>
+        ))}
       </ul>
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const buscarInput = document.getElementById('buscar') as HTMLInputElement;
+        const searchButton = document.getElementById('search-button') as HTMLButtonElement;
+
+        const buscarMods = () => {
+          const searchTerm = buscarInput.value.trim().toLowerCase();
+          const items = document.querySelectorAll<HTMLLIElement>('#mods-list li');
+
+          items.forEach(item => {
+            const descripcion = item.querySelector('.descripcion')!.textContent!.toLowerCase();
+            if (descripcion.includes(searchTerm)) {
+              item.style.visibility = 'visible';
+              item.style.position = 'relative';
+            } else {
+              item.style.visibility = 'hidden';
+              item.style.position = 'absolute';
+            }
+          });
+        };
+
+        searchButton.addEventListener('click', buscarMods);
+        buscarInput.addEventListener('input', buscarMods);
+      });
+    </script>
   </body>
 </html>
