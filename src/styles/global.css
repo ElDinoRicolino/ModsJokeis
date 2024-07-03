@@ -92,6 +92,7 @@ button:hover {
     max-width: 80px;
     max-height: 80px;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .banner {
